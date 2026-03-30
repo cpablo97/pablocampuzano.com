@@ -1,0 +1,47 @@
+:root {
+  /* ── Colors ── */
+  --color-black:   #000000;
+  --color-white:   #ffffff;
+  --color-bg:      #f6f6f6;
+  --color-pink:    #ff34d2;
+  --color-text:    #484848;
+  --color-shadow:  rgba(0, 0, 0, 0.25);
+
+  /* ── Typography ── */
+  --font-display: 'Georgia', serif;
+  --font-mono:    'Bitcount Grid Single', 'Courier New', monospace;
+  --font-serif:   'Merriweather', Georgia, serif;
+  --font-code:    'Source Code Pro', monospace;
+
+  /* ── Spacing scale ── */
+  --sp-1:  4px;
+  --sp-2:  8px;
+  --sp-3:  12px;
+  --sp-4:  16px;
+  --sp-5:  20px;
+  --sp-6:  24px;
+  --sp-7:  32px;
+  --sp-8:  48px;
+  --sp-9:  56px;
+  --sp-10: 80px;
+  --sp-11: 86px;
+  --sp-12: 96px;
+
+  /* ── Layout ── */
+  --nav-height:      192px;
+  --page-px:         80px;
+  --card-width:      413px;
+  --card-img-height: 624px;
+
+  /* ── Hero tiles ── */
+  --tile-size:    128px;
+  --tile-font:    64px;
+  --tile-spacing: 19.2px;
+  --tile-gap:     25px;
+  --row-gap:      48px;
+
+  /* ── Transitions ── */
+  --t-fast: 0.15s ease;
+  --t-med:  0.25s ease;
+  --t-slow: 0.4s  ease;
+}

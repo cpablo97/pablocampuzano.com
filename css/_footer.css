@@ -1,0 +1,86 @@
+.footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 56px var(--page-px);
+  overflow: hidden;
+}
+
+/* ── Contact links ── */
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-link .icon {
+  width: 24px;
+  text-align: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.footer-link a,
+.footer-link .text {
+  font-family: var(--font-display);
+  font-size: 24px;
+  color: var(--color-black);
+}
+
+.footer-link a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--t-fast);
+}
+
+.footer-link a:hover {
+  color: var(--color-pink);
+}
+
+/* ── Back to top ── */
+.back-up {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  height: 162px;
+  text-decoration: none;
+  color: var(--color-black);
+  transition: color var(--t-fast);
+}
+
+.back-up:hover {
+  color: var(--color-pink);
+}
+
+.back-up > span {
+  font-family: var(--font-mono);
+  font-size: 24px;
+  font-weight: 500;
+  text-transform: lowercase;
+  white-space: nowrap;
+  align-self: flex-end;
+}
+
+.back-up-arrow {
+  width: 40px;
+  height: 92px;
+  flex-shrink: 0;
+}
+
+.back-up-arrow img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform: rotate(180deg);
+  transition: transform var(--t-med);
+}
+
+.back-up:hover .back-up-arrow img {
+  transform: rotate(180deg) translateY(8px);
+}

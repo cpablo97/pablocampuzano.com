@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pablo Campuzano</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Source+Code+Pro:wght@400;600;700&family=Bitcount+Grid+Single:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a class="navbar-name" href="#">Pablo campuzano</a>
+
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="navbar-links">
+      <a href="#projects">projects ↓</a>
+      <a href="about.html">about →</a>
+    </div>
+  </nav>
+
+  <!-- HERO: typographic grid
+       All tiles idle as `<`; JS erupts each tile through its letter.
+       data-letter = character shown in stage-1 / stage-2
+       * = filler/spacer tile (shows asterisk when erupted) -->
+  <section class="hero">
+
+    <!-- Row 1: * P A B L O *  — right-aligned -->
+    <div class="typo-row typo-row--right">
+      <div class="typo-char" data-letter="*"><span class="typo-glyph typo-glyph--idle">&lt;</span></div>
+      <div class="typo-char" data-letter="P"><span class="typo-glyph typo-glyph--idle">&lt;</span></div>
+      <div class="typo-char" data-letter="A"><span class="typo-glyph typo-glyph--idle">&lt;</span></div>
+      <div class="typo-char" data-letter="B"><span class="typo-glyph typo-glyph--idle">&lt;</span></div>
+      <div class="typo-char" data-letter="L"><span class="typo-glyph typo-glyph--idle">&lt;</span></div>
+      <div class="typo-char" data-letter="O"><span class="typo-glyph typo-glyph--idle">&lt;</span></div>
+      <div class="typo-char" data-letter="*"><span class="typo-glyph typo-glyph--idle">&lt;</span></div>
+    </div>
+
+    <!-- Row 2: P * A B L * O  — left-aligned -->
+    <div class="typo-row typo-row--left">
+      <div class="typo-char" data-letter="P"><span class="typo-glyph typo-glyph--idle">&lt;</span></div>
+      <div class="typo-char" data-letter="*"><span class="typo-glyph typo-glyph--idle">&lt;</span></div>
+      <div class="typo-char" data-letter="A"><span class="typo-glyph typo-glyph--idle">&lt;</span></div>
+      <div class="typo-char" data-letter="B"><span class="typo-glyph typo-glyph--idle">&lt;</span></div>
+      <div class="typo-char" data-letter="L"><span class="typo-glyph typo-glyph--idle">&lt;</span></div>
+      <div class="typo-char" data-letter="*"><span class="typo-glyph typo-glyph--idle">&lt;</span></div>
+      <div class="typo-char" data-letter="O"><span class="typo-glyph typo-glyph--idle">&lt;</span></div>
+    </div>
+
+    <!-- Row 3: P A B L * O *  — centered -->
+    <div class="typo-row typo-row--center">
+      <div class="typo-char" data-letter="P"><span class="typo-glyph typo-glyph--idle">&lt;</span></div>
+      <div class="typo-char" data-letter="A"><span class="typo-glyph typo-glyph--idle">&lt;</span></div>
+      <div class="typo-char" data-letter="B"><span class="typo-glyph typo-glyph--idle">&lt;</span></div>
+      <div class="typo-char" data-letter="L"><span class="typo-glyph typo-glyph--idle">&lt;</span></div>
+      <div class="typo-char" data-letter="*"><span class="typo-glyph typo-glyph--idle">&lt;</span></div>
+      <div class="typo-char" data-letter="O"><span class="typo-glyph typo-glyph--idle">&lt;</span></div>
+      <div class="typo-char" data-letter="*"><span class="typo-glyph typo-glyph--idle">&lt;</span></div>
+    </div>
+
+    <!-- Row 4: P A B L * O *  — right-aligned -->
+    <div class="typo-row typo-row--right">
+      <div class="typo-char" data-letter="P"><span class="typo-glyph typo-glyph--idle">&lt;</span></div>
+      <div class="typo-char" data-letter="A"><span class="typo-glyph typo-glyph--idle">&lt;</span></div>
+      <div class="typo-char" data-letter="B"><span class="typo-glyph typo-glyph--idle">&lt;</span></div>
+      <div class="typo-char" data-letter="L"><span class="typo-glyph typo-glyph--idle">&lt;</span></div>
+      <div class="typo-char" data-letter="*"><span class="typo-glyph typo-glyph--idle">&lt;</span></div>
+      <div class="typo-char" data-letter="O"><span class="typo-glyph typo-glyph--idle">&lt;</span></div>
+      <div class="typo-char" data-letter="*"><span class="typo-glyph typo-glyph--idle">&lt;</span></div>
+    </div>
+
+    <!-- Row 5: * P A * B L O  — left-aligned -->
+    <div class="typo-row typo-row--left">
+      <div class="typo-char" data-letter="*"><span class="typo-glyph typo-glyph--idle">&lt;</span></div>
+      <div class="typo-char" data-letter="P"><span class="typo-glyph typo-glyph--idle">&lt;</span></div>
+      <div class="typo-char" data-letter="A"><span class="typo-glyph typo-glyph--idle">&lt;</span></div>
+      <div class="typo-char" data-letter="*"><span class="typo-glyph typo-glyph--idle">&lt;</span></div>
+      <div class="typo-char" data-letter="B"><span class="typo-glyph typo-glyph--idle">&lt;</span></div>
+      <div class="typo-char" data-letter="L"><span class="typo-glyph typo-glyph--idle">&lt;</span></div>
+      <div class="typo-char" data-letter="O"><span class="typo-glyph typo-glyph--idle">&lt;</span></div>
+    </div>
+
+  </section>
+
+  <!-- PROJECTS HEADING -->
+  <div id="projects" class="section-projects-header">
+    <h2>projects ↴</h2>
+  </div>
+
+  <!-- PROJECTS GRID -->
+  <section class="projects-grid">
+
+    <!-- Uniandes Design System -->
+    <a class="project-card" href="uniandes-design-system.html">
+      <div class="project-image">
+        <img src="https://www.figma.com/api/mcp/asset/f31671be-61b2-438f-98cf-6e2e3785a7f3" alt="Uniandes Design System">
+      </div>
+      <div class="project-content">
+        <div class="project-title-desc">
+          <h3 class="project-title">Uniandes Design System</h3>
+          <p class="project-desc">Design and governance of the Uniandes design system. A new way of collaborating within the Digital Transformation team to build digital products.</p>
+        </div>
+        <div class="project-tags">
+          <span class="tag">ux/ui</span>
+          <span class="tag">design system</span>
+          <span class="tag">strategic design</span>
+          <span class="tag">figma</span>
+          <span class="tag">drupal</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Uniandes new website -->
+    <a class="project-card" href="uniandes-website.html">
+      <div class="project-image project-image--contain">
+        <img src="https://www.figma.com/api/mcp/asset/d01146f0-c709-4e0f-98e7-03130c1bcf01" alt="Uniandes new website">
+      </div>
+      <div class="project-content">
+        <div class="project-title-desc">
+          <h3 class="project-title">Uniandes new website</h3>
+          <p class="project-desc">Design the new website for Uniandes using the newly developed design system.</p>
+        </div>
+        <div class="project-tags">
+          <span class="tag">ux/ui</span>
+          <span class="tag">information architecture</span>
+          <span class="tag">drupal</span>
+          <span class="tag">figma</span>
+          <span class="tag">ooux</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- BiciLab -->
+    <a class="project-card" href="bicilab.html">
+      <div class="project-image">
+        <img src="https://www.figma.com/api/mcp/asset/0215dc4b-07d8-4c3c-9bfe-3b54e1224149" alt="BiciLab">
+      </div>
+      <div class="project-content">
+        <div class="project-title-desc">
+          <h3 class="project-title">BiciLab</h3>
+          <p class="project-desc">BiciLab is a design laboratory that aims to conduct visualization experiments to create meaningful interactions between urban cyclists and their environment.</p>
+        </div>
+        <div class="project-tags">
+          <span class="tag">ux research</span>
+          <span class="tag">interaction design</span>
+          <span class="tag">arduino</span>
+          <span class="tag">figma</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Árbol * Área -->
+    <a class="project-card" href="arbol-area.html">
+      <div class="project-image project-image--contain">
+        <img src="https://www.figma.com/api/mcp/asset/8d1058f8-dbea-4cf3-9492-1c43bc579ae5" alt="Árbol * Área">
+      </div>
+      <div class="project-content">
+        <div class="project-title-desc">
+          <h3 class="project-title">Árbol * Área</h3>
+          <p class="project-desc">The Árbol * Área visualization is a way to understand urban trees and how they change in different localities within the city of Bogotá.</p>
+        </div>
+        <div class="project-tags">
+          <span class="tag">data visualization</span>
+          <span class="tag">processing</span>
+          <span class="tag">ui</span>
+          <span class="tag">figma</span>
+          <span class="tag">maps</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- CPIT | DEI -->
+    <a class="project-card" href="cpit-dei.html">
+      <div class="project-image">
+        <img src="https://www.figma.com/api/mcp/asset/90dc4568-d875-43ce-a715-7ea918f0cdd2" alt="CPIT | DEI" style="object-fit: contain; object-position: top left;">
+      </div>
+      <div class="project-content">
+        <div class="project-title-desc">
+          <h3 class="project-title">CPIT | DEI</h3>
+          <p class="project-desc">CPIT is a dashboard that allows traffic officers to validate traffic violations and issue fines.</p>
+        </div>
+        <div class="project-tags">
+          <span class="tag">ux/ui</span>
+          <span class="tag">data visualization</span>
+          <span class="tag">dashboard design</span>
+          <span class="tag">figma</span>
+          <span class="tag">maps</span>
+          <span class="tag">mapbox</span>
+        </div>
+      </div>
+    </a>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-links">
+      <div class="footer-link">
+        <span class="icon">🌐</span>
+        <a href="mailto:pcampuz@gmail.com">pcampuz@gmail.com</a>
+      </div>
+      <div class="footer-link">
+        <span class="icon">📎</span>
+        <a href="https://co.linkedin.com/in/pablo-campuzano-678768303" target="_blank">LinkedIn</a>
+      </div>
+      <div class="footer-link">
+        <span class="icon">🎓</span>
+        <a href="https://arqdis.uniandes.edu.co/profesores/pablo-campuzano-correa/" target="_blank">Uniandes</a>
+      </div>
+      <div class="footer-link">
+        <span class="icon">📍</span>
+        <span class="text">Bogotá, Colombia</span>
+      </div>
+    </div>
+    <a class="back-up" href="#">
+      <span>go back up</span>
+      <div class="back-up-arrow">
+        <img src="https://www.figma.com/api/mcp/asset/87802406-f0a8-408b-8422-8ec13201a0c7" alt="up arrow">
+      </div>
+    </a>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script src="js/hero.js"></script>
+</body>
+</html>

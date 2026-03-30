@@ -1,0 +1,140 @@
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   HERO — typographic animation grid
+
+   Animation states per tile:
+     idle     → < at 64px, overflow clipped
+     stage-1  → letter at 200px, bold, overflow visible
+     stage-2  → letter at 200px, light, P/B nearly transparent
+     exiting  → letter fades + shrinks back
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+/* ── Size tokens (responsive-overridden in _responsive.css) ── */
+:root {
+  --letter-size:    200px;
+  --letter-ls:      60px;
+  --letter-scale-0: 0.25;   /* resting scale (hidden) */
+}
+
+/* ── Section ── */
+.hero {
+  background-color: var(--color-black);
+  padding: 86px 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--row-gap);
+  align-items: center;
+  overflow: hidden;
+  isolation: isolate; /* contain z-index of active tiles */
+}
+
+/* ── Rows ── */
+.typo-row {
+  width: 100%;
+  max-width: 1352px;
+  display: flex;
+  gap: var(--tile-gap);
+  padding: 0 20px;
+}
+
+.typo-row--right  { justify-content: flex-end; }
+.typo-row--left   { justify-content: flex-start; }
+.typo-row--center { justify-content: center; }
+
+/* ── Tile ── */
+.typo-char {
+  width:  var(--tile-size);
+  height: var(--tile-size);
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;   /* clips idle state */
+  z-index: 1;
+}
+
+/* Active: allow letter to bleed beyond tile */
+.typo-char.is-active {
+  overflow: visible;
+  z-index: 10;
+}
+
+/* ── Shared glyph base ── */
+.typo-glyph {
+  position: absolute;
+  top:  50%;
+  left: 50%;
+  font-family:  var(--font-mono);
+  color:        var(--color-white);
+  line-height:  1;
+  text-transform: uppercase;
+  text-align:   center;
+  white-space:  nowrap;
+  pointer-events: none;
+  user-select:  none;
+}
+
+/* ── Idle glyph: tiny `<` ── */
+.typo-glyph--idle {
+  font-size:      var(--tile-font);
+  letter-spacing: var(--tile-spacing);
+  transform:      translate(-50%, -50%);
+  opacity:        1;
+  transition:     opacity 0.2s ease;
+}
+
+/* Fade out idle when tile activates */
+.typo-char.is-active .typo-glyph--idle {
+  opacity: 0;
+}
+
+/* ── Letter glyph: large erupting letter ── */
+.typo-glyph--letter {
+  font-size:      var(--letter-size);
+  letter-spacing: var(--letter-ls);
+  font-weight:    700;
+  opacity:        0;
+  transform:      translate(-50%, -50%) scale(var(--letter-scale-0));
+  transition:
+    opacity     0.35s ease,
+    transform   0.40s cubic-bezier(0.34, 1.56, 0.64, 1),
+    font-weight 0.50s ease;
+  will-change: transform, opacity;
+}
+
+/* ── Stage 1: letter erupts — bold, full scale ── */
+.typo-char.is-stage-1 .typo-glyph--letter {
+  opacity:    1;
+  transform:  translate(-50%, -50%) scale(1);
+  font-weight: 700;
+}
+
+/* ── Stage 2: lighter weight (different grid texture) ── */
+.typo-char.is-stage-2 .typo-glyph--letter {
+  opacity:    1;
+  transform:  translate(-50%, -50%) scale(1);
+  font-weight: 300;
+  transition:
+    opacity     0.45s ease,
+    transform   0.45s ease,
+    font-weight 0.60s ease;
+}
+
+/* P and B go nearly transparent in stage 2 — matches Figma exactly */
+.typo-char[data-letter="P"].is-stage-2 .typo-glyph--letter,
+.typo-char[data-letter="B"].is-stage-2 .typo-glyph--letter {
+  opacity: 0.06;
+}
+
+/* ── Exiting: letter fades and shrinks ── */
+.typo-char.is-exiting .typo-glyph--letter {
+  opacity:    0;
+  transform:  translate(-50%, -50%) scale(var(--letter-scale-0));
+  font-weight: 700;
+  transition:
+    opacity   0.30s ease-in,
+    transform 0.30s ease-in;
+}
+
+/* ── Reduced-motion fallback ── */
+@media (prefers-reduced-motion: reduce) {
+  .typo-glyph--idle,
+  .typo-glyph--letter { transition: none; }
+}

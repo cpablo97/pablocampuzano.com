@@ -1,0 +1,25 @@
+/*
+ * Pablo Campuzano — Portfolio
+ * CSS entry point
+ *
+ * Architecture:
+ *   _tokens.css     — CSS custom properties (colors, fonts, spacing)
+ *   _base.css       — reset + body defaults
+ *   _navbar.css     — navigation component
+ *   _hero.css       — hero typographic grid + tile animation
+ *   _projects.css   — project grid, cards, tags
+ *   _footer.css     — footer component
+ *   _about.css          — about / CV page
+ *   _project-detail.css — project detail pages (shared template)
+ *   _responsive.css     — all media queries
+ */
+
+@import 'css/_tokens.css';
+@import 'css/_base.css';
+@import 'css/_navbar.css';
+@import 'css/_hero.css';
+@import 'css/_projects.css';
+@import 'css/_footer.css';
+@import 'css/_about.css';
+@import 'css/_project-detail.css';
+@import 'css/_responsive.css';

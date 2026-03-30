@@ -1,0 +1,293 @@
+/* ══════════════════════════════════════════════
+   RESPONSIVE STYLES
+   Breakpoints:
+     1280px  wide desktop → tablet
+     1024px  tablet
+      768px  mobile
+      480px  small mobile
+   ══════════════════════════════════════════════ */
+
+/* ─── Wide → tablet (≤ 1400px) ─── */
+@media (max-width: 1400px) {
+  .projects-grid {
+    justify-content: center;
+  }
+}
+
+/* ─── Tablet (≤ 1024px) ─── */
+@media (max-width: 1024px) {
+  :root {
+    --page-px:    48px;
+    --nav-height: 140px;
+    --letter-size: 140px;
+    --letter-ls:   42px;
+  }
+
+  .navbar { padding: 24px var(--page-px); }
+  .navbar-name { font-size: 36px; }
+  .navbar-links { gap: 32px; }
+  .navbar-links a { font-size: 30px; }
+
+  .section-projects-header h2 { font-size: 48px; }
+
+  .project-card {
+    width: calc(50% - 29px);
+    --card-width: 100%;
+  }
+
+  .project-image {
+    width: 100%;
+  }
+
+  .cv-panel { padding: 64px 80px 48px; }
+  .cv-inner { width: 100%; }
+}
+
+/* ─── Mobile (≤ 768px) ─── */
+@media (max-width: 768px) {
+  :root {
+    --page-px:      24px;
+    --tile-size:    80px;
+    --tile-font:    40px;
+    --tile-spacing: 10px;
+    --tile-gap:     10px;
+    --row-gap:      20px;
+    --letter-size:  120px;
+    --letter-ls:    32px;
+  }
+
+  /* ── Navbar ── */
+  .navbar {
+    height: auto;
+    padding: 20px var(--page-px);
+    flex-wrap: wrap;
+    gap: 0;
+    overflow: visible;
+  }
+
+  .navbar-name {
+    font-size: 28px;
+    padding: 8px 0;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .navbar-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px 0 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 12px;
+  }
+
+  .navbar-links.is-open {
+    display: flex;
+  }
+
+  .navbar-links a {
+    font-size: 28px;
+  }
+
+  /* Hide sliding underline on mobile (not needed in stacked layout) */
+  .navbar-links a::after {
+    display: none;
+  }
+
+  /* ── Hero ── */
+  .hero {
+    padding: 48px 0;
+  }
+
+  .typo-row {
+    max-width: 100%;
+    justify-content: center !important;
+    padding: 0 4px;
+  }
+
+  /* ── Projects header ── */
+  .section-projects-header {
+    padding: 24px var(--page-px);
+  }
+
+  .section-projects-header h2 {
+    font-size: 36px;
+    white-space: normal;
+    text-align: center;
+  }
+
+  /* ── Projects grid ── */
+  .projects-grid {
+    padding: 40px var(--page-px);
+    gap: 48px;
+    flex-direction: column;
+  }
+
+  .project-card {
+    width: 100%;
+  }
+
+  .project-image {
+    width: 100%;
+    height: clamp(220px, 60vw, 480px);
+  }
+
+  /* ── Footer ── */
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 48px var(--page-px);
+  }
+
+  .back-up {
+    height: auto;
+  }
+
+  .footer-link a,
+  .footer-link .text {
+    font-size: 20px;
+  }
+
+  /* ── About / CV ── */
+  .cv-panel {
+    padding: 48px var(--page-px) 40px;
+  }
+
+  .cv-inner {
+    gap: 40px;
+    padding: 16px 0;
+  }
+
+  .cv-section-header,
+  .cv-section-close {
+    font-size: 18px;
+    letter-spacing: 3px;
+  }
+
+  .cv-body,
+  .cv-body-list {
+    font-size: 16px;
+  }
+
+  .experience-date,
+  .experience-desc,
+  .research-entry,
+  .edu-degree,
+  .edu-school,
+  .edu-years {
+    font-size: 16px;
+    letter-spacing: 0.6px;
+  }
+
+  .cv-divider {
+    font-size: 16px;
+  }
+
+  .profile-photo {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+/* ─── Project detail: wide (≤ 1400px) ─── */
+@media (max-width: 1400px) {
+  .project-detail-panel {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+/* ─── Project detail: tablet (≤ 1024px) ─── */
+@media (max-width: 1024px) {
+  .project-detail-panel {
+    padding: 64px 48px 48px;
+  }
+
+  .project-detail-title {
+    font-size: 72px;
+    margin-bottom: 40px;
+  }
+
+  .project-detail-about {
+    width: auto;
+    flex: 1;
+  }
+}
+
+/* ─── Project detail: mobile (≤ 768px) ─── */
+@media (max-width: 768px) {
+  .project-detail-panel {
+    padding: 48px 24px 40px;
+  }
+
+  .project-detail-title {
+    font-size: 48px;
+    letter-spacing: -0.5px;
+    margin-bottom: 32px;
+  }
+
+  .project-detail-intro {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .project-detail-about {
+    width: 100%;
+  }
+
+  .detail-body {
+    font-size: 17px;
+  }
+
+  .detail-section {
+    margin-top: 60px;
+  }
+
+  .detail-images--grid {
+    flex-direction: column;
+  }
+
+  .detail-images--grid img {
+    width: 100%;
+    flex: none;
+  }
+}
+
+/* ─── Small mobile (≤ 480px) ─── */
+@media (max-width: 480px) {
+  :root {
+    --page-px:      16px;
+    --tile-size:    48px;
+    --tile-font:    24px;
+    --tile-spacing: 6px;
+    --tile-gap:     6px;
+    --letter-size:  72px;
+    --letter-ls:    18px;
+  }
+
+  .navbar-name { font-size: 22px; }
+  .navbar-links a  { font-size: 24px; }
+
+  .section-projects-header h2 { font-size: 28px; }
+
+  .footer-link a,
+  .footer-link .text { font-size: 16px; }
+
+  .cv-panel { padding: 32px var(--page-px) 32px; }
+}
+
+/* ─── Very small mobile (≤ 360px) ─── */
+@media (max-width: 360px) {
+  :root {
+    --tile-size:  40px;
+    --tile-font:  20px;
+    --tile-gap:   4px;
+    --letter-size: 58px;
+    --letter-ls:  12px;
+  }
+}

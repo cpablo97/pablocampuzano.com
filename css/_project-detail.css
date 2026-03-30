@@ -1,0 +1,176 @@
+/* ══════════════════════════════════════════
+   PROJECT DETAIL PAGES — shared template
+   ══════════════════════════════════════════ */
+
+/* ── Outer content wrapper ── */
+.project-content-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Main panel ── */
+.project-detail-panel {
+  background-color: var(--color-white);
+  width: 100%;
+  padding: 96px 197px 56px;
+  box-shadow: 0 4px 4px var(--color-shadow);
+  display: flex;
+  justify-content: center;
+}
+
+.project-detail-inner {
+  width: 1119px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Page title ── */
+.project-detail-title {
+  font-family: var(--font-display);
+  font-size: 96px;
+  font-weight: bold;
+  color: var(--color-black);
+  line-height: 1.05;
+  letter-spacing: -1px;
+  margin-bottom: 56px;
+}
+
+/* ── Two-column intro ── */
+.project-detail-intro {
+  display: flex;
+  gap: 55px;
+  align-items: flex-start;
+}
+
+.project-detail-about {
+  width: 650px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.project-detail-meta {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* ── Metadata groups ── */
+.meta-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.meta-heading {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--color-black);
+}
+
+/* ── Section headings & body ── */
+.detail-section-heading {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--color-black);
+}
+
+.detail-body {
+  font-family: var(--font-display);
+  font-size: 20px;
+  color: var(--color-black);
+  line-height: 1.6;
+}
+
+/* ── External link with arrow ── */
+.detail-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-display);
+  font-size: 20px;
+  color: var(--color-black);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--t-fast);
+}
+
+.detail-link:hover {
+  color: var(--color-pink);
+}
+
+.detail-link .arrow-icon {
+  font-size: 16px;
+  text-decoration: none;
+}
+
+/* ── Progress "done" tag ── */
+.tag-done {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  font-family: var(--font-display);
+  font-size: 16px;
+  color: var(--color-black);
+  text-transform: lowercase;
+  white-space: nowrap;
+}
+
+.tag-done::before {
+  font-family: var(--font-mono);
+  content: '\007B';
+  font-size: 22px;
+  line-height: 1;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+
+.tag-done::after {
+  font-family: var(--font-mono);
+  content: '\007D';
+  font-size: 22px;
+  line-height: 1;
+  margin-left: 4px;
+  vertical-align: middle;
+}
+
+/* ── Content sections ── */
+.detail-section {
+  margin-top: 131px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ── Image layouts ── */
+.detail-images {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* 2- or 3-column horizontal grid */
+.detail-images--grid {
+  flex-direction: row;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.detail-images--grid img {
+  flex: 1;
+  width: 0;
+  min-width: 0;
+  height: auto;
+  object-fit: cover;
+}
+
+.detail-images img {
+  width: 100%;
+  height: auto;
+  display: block;
+}

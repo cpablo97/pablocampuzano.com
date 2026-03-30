@@ -1,0 +1,174 @@
+/* ── Page-level overrides for about.html ── */
+body.page-about {
+  font-family: var(--font-code);
+  color: var(--color-text);
+}
+
+/* ── CV panel ── */
+.cv-panel {
+  background-color: var(--color-white);
+  width: 100%;
+  padding: 96px 197px 56px;
+  box-shadow: 0 4px 4px var(--color-shadow);
+  display: flex;
+  justify-content: center;
+}
+
+.cv-inner {
+  width: 1119px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  padding: 24px 17px;
+}
+
+/* ── Profile photo ── */
+.profile-photo {
+  width: 262px;
+  height: 262px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.profile-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── CV section wrapper ── */
+.cv-section {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.cv-section-header {
+  font-family: var(--font-code);
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 5.28px;
+  color: var(--color-text);
+  line-height: 1;
+}
+
+.cv-section-header .kw { text-transform: uppercase; }
+
+.cv-section-close {
+  font-family: var(--font-code);
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 5.28px;
+  color: var(--color-text);
+}
+
+/* ── Body text ── */
+.cv-body {
+  padding: 4px 10px;
+  font-family: var(--font-code);
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+.cv-body a {
+  color: var(--color-pink);
+  text-decoration: underline;
+  transition: opacity var(--t-fast);
+}
+
+.cv-body a:hover { opacity: 0.75; }
+
+.cv-body-list {
+  padding: 4px 10px;
+  font-family: var(--font-code);
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--color-text);
+  line-height: 1.8;
+}
+
+/* ── Work experience ── */
+.experience-entry {
+  padding: 4px 10px;
+}
+
+.experience-date {
+  font-family: var(--font-code);
+  font-size: 20px;
+  color: var(--color-pink);
+  margin-bottom: 4px;
+  display: block;
+}
+
+.experience-desc {
+  font-family: var(--font-code);
+  font-size: 20px;
+  color: var(--color-text);
+  line-height: 1.6;
+  letter-spacing: 1.2px;
+}
+
+.experience-desc strong { font-weight: 600; }
+
+.experience-desc a {
+  color: inherit;
+  text-decoration: underline;
+  transition: color var(--t-fast);
+}
+
+.experience-desc a:hover { color: var(--color-pink); }
+
+/* ── Divider ── */
+.cv-divider {
+  padding: 10px 0;
+  font-family: var(--font-code);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-pink);
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  letter-spacing: 0;
+}
+
+/* ── Research ── */
+.research-entry {
+  padding: 4px 10px;
+  font-family: var(--font-code);
+  font-size: 20px;
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+.research-entry a {
+  color: var(--color-pink);
+  text-decoration: underline;
+  word-break: break-all;
+  transition: opacity var(--t-fast);
+}
+
+.research-entry a:hover { opacity: 0.75; }
+
+/* ── Education ── */
+.edu-entry { padding: 4px 10px; }
+
+.edu-degree {
+  font-family: var(--font-code);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-text);
+  letter-spacing: 0.4px;
+}
+
+.edu-school,
+.edu-years {
+  font-family: var(--font-code);
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--color-text);
+  letter-spacing: 0.4px;
+}
